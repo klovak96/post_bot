@@ -5,14 +5,14 @@ import subprocess
 
 # Функция для запуска вашего Jupyter Notebook
 def run_bot_notebook():
-    subprocess.run(["jupyter", "nbconvert", "--to", "script", "/path/to/your/notebook/pbot.ipynb"])
-    subprocess.run(["python", "/path/to/your/notebook/pbot.py"])
+    #subprocess.run(["jupyter", "nbconvert", "--to", "script", "/path/to/your/notebook/pbot.ipynb"])
+    subprocess.run(["python", "pbot.py"])
 
 # Определение DAG
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
-    'start_date': datetime(2024, 10, 22),
+    'start_date': datetime(2024, 10, 23),
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
 }
