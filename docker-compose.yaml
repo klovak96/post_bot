@@ -3,15 +3,17 @@ services:
   postgres:
     image: postgres:13
     environment:
-      POSTGRES_USER: airflow
-      POSTGRES_PASSWORD: airflow
-      POSTGRES_DB: airflow
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: postgres
     volumes:
       - ./pgdata:/var/lib/postgresql/data
     restart: always
 
   webserver:
-    image: apache/airflow:2.6.0
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
@@ -25,13 +27,16 @@ services:
     depends_on:
       - postgres
     restart: always
+    env_file:
+      - .env
 
   scheduler:
-    image: apache/airflow:2.6.0
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      AIRFLOW__WEBSERVER__AUTHENTICATE: "False"
     command: scheduler
     volumes:
       - ./dags:/opt/airflow/dags
@@ -39,3 +44,5 @@ services:
     depends_on:
       - postgres
     restart: always
+    env_file:
+      - .env

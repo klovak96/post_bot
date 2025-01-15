@@ -1,0 +1,26 @@
+[2024-10-23T00:04:01.370+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: telegram_bot_dag.run_bot_notebook scheduled__2024-10-23T00:03:00+00:00 [queued]>
+[2024-10-23T00:04:01.376+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: telegram_bot_dag.run_bot_notebook scheduled__2024-10-23T00:03:00+00:00 [queued]>
+[2024-10-23T00:04:01.376+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 2
+[2024-10-23T00:04:01.384+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): run_bot_notebook> on 2024-10-23 00:03:00+00:00
+[2024-10-23T00:04:01.386+0000] {standard_task_runner.py:57} INFO - Started process 238 to run task
+[2024-10-23T00:04:01.389+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'telegram_bot_dag', 'run_bot_notebook', 'scheduled__2024-10-23T00:03:00+00:00', '--job-id', '113', '--raw', '--subdir', 'DAGS_FOLDER/bot_dag.py', '--cfg-path', '/tmp/tmpkhkhtygu']
+[2024-10-23T00:04:01.390+0000] {standard_task_runner.py:85} INFO - Job 113: Subtask run_bot_notebook
+[2024-10-23T00:04:01.429+0000] {task_command.py:410} INFO - Running <TaskInstance: telegram_bot_dag.run_bot_notebook scheduled__2024-10-23T00:03:00+00:00 [running]> on host 941f55a3084b
+[2024-10-23T00:04:01.495+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='telegram_bot_dag' AIRFLOW_CTX_TASK_ID='run_bot_notebook' AIRFLOW_CTX_EXECUTION_DATE='2024-10-23T00:03:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-23T00:03:00+00:00'
+[2024-10-23T00:04:01.554+0000] {python.py:183} INFO - Done. Returned value was: None
+[2024-10-23T00:04:01.567+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=telegram_bot_dag, task_id=run_bot_notebook, execution_date=20241023T000300, start_date=20241023T000401, end_date=20241023T000401
+[2024-10-23T00:04:01.618+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2024-10-23T00:04:01.635+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-23T00:37:03.145+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: telegram_bot_dag.run_bot_notebook scheduled__2024-10-23T00:03:00+00:00 [queued]>
+[2024-10-23T00:37:03.169+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: telegram_bot_dag.run_bot_notebook scheduled__2024-10-23T00:03:00+00:00 [queued]>
+[2024-10-23T00:37:03.170+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 2
+[2024-10-23T00:37:03.224+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): run_bot_notebook> on 2024-10-23 00:03:00+00:00
+[2024-10-23T00:37:03.230+0000] {standard_task_runner.py:57} INFO - Started process 183 to run task
+[2024-10-23T00:37:03.237+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'telegram_bot_dag', 'run_bot_notebook', 'scheduled__2024-10-23T00:03:00+00:00', '--job-id', '171', '--raw', '--subdir', 'DAGS_FOLDER/bot_dag.py', '--cfg-path', '/tmp/tmpt43htta4']
+[2024-10-23T00:37:03.240+0000] {standard_task_runner.py:85} INFO - Job 171: Subtask run_bot_notebook
+[2024-10-23T00:37:03.579+0000] {task_command.py:410} INFO - Running <TaskInstance: telegram_bot_dag.run_bot_notebook scheduled__2024-10-23T00:03:00+00:00 [running]> on host bf7c1478f077
+[2024-10-23T00:37:04.112+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='telegram_bot_dag' AIRFLOW_CTX_TASK_ID='run_bot_notebook' AIRFLOW_CTX_EXECUTION_DATE='2024-10-23T00:03:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-23T00:03:00+00:00'
+[2024-10-23T00:37:04.319+0000] {python.py:183} INFO - Done. Returned value was: None
+[2024-10-23T00:37:04.405+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=telegram_bot_dag, task_id=run_bot_notebook, execution_date=20241023T000300, start_date=20241023T003703, end_date=20241023T003704
+[2024-10-23T00:37:04.621+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2024-10-23T00:37:04.711+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check

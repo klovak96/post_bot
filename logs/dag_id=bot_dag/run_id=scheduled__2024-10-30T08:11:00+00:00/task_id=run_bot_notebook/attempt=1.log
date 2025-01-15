@@ -1,0 +1,16 @@
+[2024-11-04T13:07:03.268+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: bot_dag.run_bot_notebook scheduled__2024-10-30T08:11:00+00:00 [queued]>
+[2024-11-04T13:07:03.287+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: bot_dag.run_bot_notebook scheduled__2024-10-30T08:11:00+00:00 [queued]>
+[2024-11-04T13:07:03.289+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 2
+[2024-11-04T13:07:03.310+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): run_bot_notebook> on 2024-10-30 08:11:00+00:00
+[2024-11-04T13:07:03.321+0000] {standard_task_runner.py:57} INFO - Started process 1518 to run task
+[2024-11-04T13:07:03.326+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'bot_dag', 'run_bot_notebook', 'scheduled__2024-10-30T08:11:00+00:00', '--job-id', '10989', '--raw', '--subdir', 'DAGS_FOLDER/bot_dag.py', '--cfg-path', '/tmp/tmpcf7igyvk']
+[2024-11-04T13:07:03.330+0000] {standard_task_runner.py:85} INFO - Job 10989: Subtask run_bot_notebook
+[2024-11-04T13:07:03.545+0000] {task_command.py:410} INFO - Running <TaskInstance: bot_dag.run_bot_notebook scheduled__2024-10-30T08:11:00+00:00 [running]> on host 454d1fc6eddf
+[2024-11-04T13:07:04.079+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='bot_dag' AIRFLOW_CTX_TASK_ID='run_bot_notebook' AIRFLOW_CTX_EXECUTION_DATE='2024-10-30T08:11:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-30T08:11:00+00:00'
+[2024-11-04T13:07:04.081+0000] {bot_dag.py:9} INFO - Функция run_bot_notebook запущена
+[2024-11-04T13:07:04.204+0000] {bot_dag.py:22} ERROR - Ошибка при запуске скрипта: python: can't open file '/src/pbot.py': [Errno 2] No such file or directory
+
+[2024-11-04T13:07:04.205+0000] {python.py:183} INFO - Done. Returned value was: None
+[2024-11-04T13:07:04.251+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=bot_dag, task_id=run_bot_notebook, execution_date=20241030T081100, start_date=20241104T130703, end_date=20241104T130704
+[2024-11-04T13:07:04.338+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2024-11-04T13:07:04.448+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check
